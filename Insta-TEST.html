@@ -1,0 +1,49 @@
+<!-- Online testbar unter https://krmr-d.github.io/Events_test/mmo-pretix-events-widget-TEST.html -->
+<html>
+    <head>
+        <link rel="stylesheet" href="https://www.spiegel.de/assets/css/styles.spon.css">
+    </head>
+    <body>
+        <div class="relative z-20 w-full mx-auto sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <div class="absolute inset-0 rounded bg-white dark:bg-dm-shade-darkest shadow z-0"></div>
+
+            <div class="relative sm:w-full md:w-10/12 lg:w-8/12 mx-auto sm:p-16 md:p-24 lg:p-24">
+                <h1 class="font-brandUI font-extrabold text-black lg:text-5xl md:text-3xl sm:text-2xl leading-tight mb-32 relative">Insta Testseite</h1>
+                <p>Hier sollte im Instagram Browser ein Hinweis stehen, der sonst nicht erscheint.</p>
+            </div>
+
+
+        </div>
+        <div id="spInstaBanner" class="fixed z-max bottom-0 w-full antialiased pointer-events-none" style="animation: slideUp 1s ease-in-out; transition: .3s ease-in-out;">
+            <div class="mx-auto">
+                <div class="flex justify-stretch mx-auto sm:max-w-sm md:max-w-md lg:max-w-lg lg:px-6">
+                    <div class="relative w-full md:flex lg:flex items-center sm:text-center sm:px-16 sm:py-40 md:p-24 lg:p-24 bg-white dark:bg-dm-shade-darkest border border-shade-lighter dark:border-shade-dark pointer-events-auto"
+                        style="border-radius: 16px 16px 0px 0px; box-shadow: 0px -1px 12px rgba(0, 0, 0, .1);">
+                        <button onclick="atExperienceInteract()" class="absolute top-0 right-0 sm:p-16 md:p-24 lg:p-24 outline-focus cursor-pointer" data-sara-click-el="button">
+                            <svg class="hover:opacity-distinct text-black dark:text-shade-lightest" width="24" height="24"><use xlink:href="#spon-close-l"></use></svg><span class="sr-only">Dialog schließen</span>
+                        </button>
+                        <a onclick="atExperienceInteract()" href="https://www.spiegel.de/backstage/spiegel-games-das-neue-kostenlose-quiz-und-raetsel-angebot-mit-wordle-wortsuche-und-paarsuche-a-92d40779-0aa8-465a-8b23-7b6c856c5f93"
+                            class="md:flex lg:flex sm:content-center items-center md:mr-40 md:pr-8 lg:mr-40 lg:pr-8">
+                            <div class="lg:mr-24 md:mr-16 sm:text-center">
+                                <p class="mt-8 sm:mb-16 font-sansUI text-base text-black dark:text-shade-lightest leading-normal">
+                                    Dieser Hinweis steht nur auf Instagram. Klick auf das Banner, um zum Artikel zu kommen.
+                                </p>
+                            </div>
+                            <div>
+                                <button class="inline-block px-20 py-12 bg-primary-base dark:bg-dm-primary-base hover:bg-primary-dark focus:bg-primary-darker border border-primary-base dark:border-dm-primary-base hover:border-primary-dark focus:border-primary-darker text-white font-sansUI text-base leading-normal font-bold whitespace-nowrap rounded">
+                                    Hier klicken
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                function atExperienceInteract() {
+                    adobe.target.trackEvent({ mbox: 'SPMM_Banner_Close' })
+                    document.getElementById('spPlusBanner').style.display = 'none';
+                }
+            </script>
+        </div>
+    </body>
+</html>

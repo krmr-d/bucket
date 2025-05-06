@@ -1,4 +1,4 @@
-<!-- Online testbar unter https://krmr-d.github.io/Events_test/mmo-pretix-events-widget-TEST.html -->
+<!-- Online testbar unter https://krmr-d.github.io/bucket/insta-TEST.html -->
 <html>
     <head>
         <link rel="stylesheet" href="https://www.spiegel.de/assets/css/styles.spon.css">
@@ -14,7 +14,7 @@
 
 
         </div>
-        <div id="spInstaBanner" class="fixed z-max bottom-0 w-full antialiased pointer-events-none" style="animation: slideUp 1s ease-in-out; transition: .3s ease-in-out;">
+        <div id="spInstaBanner" class="hidden fixed z-max bottom-0 w-full antialiased pointer-events-none" style="animation: slideUp 1s ease-in-out; transition: .3s ease-in-out;">
             <div class="mx-auto">
                 <div class="flex justify-stretch mx-auto sm:max-w-sm md:max-w-md lg:max-w-lg lg:px-6">
                     <div class="relative w-full md:flex lg:flex items-center sm:text-center sm:px-16 sm:py-40 md:p-24 lg:p-24 bg-white dark:bg-dm-shade-darkest border border-shade-lighter dark:border-shade-dark pointer-events-auto"
@@ -41,7 +41,18 @@
             <script type="text/javascript">
                 function atExperienceInteract() {
                     adobe.target.trackEvent({ mbox: 'SPMM_Banner_Close' })
-                    document.getElementById('spPlusBanner').style.display = 'none';
+                    document.getElementById('spInstaBanner').style.display = 'none';
+                }
+
+                var ua = navigator.userAgent || navigator.vendor || window.opera;
+                var isInstagram = (ua.indexOf('Instagram') > -1) ? true : false;
+
+                if (document.documentElement.classList ){
+                    if (isInstagram) {
+                        window.document.body.classList.add('instagram-browser');
+                    // alert("debugging within the Instagram in-app browser");
+                    document.getElementById('spInstaBanner').classList.remove('hidden');
+                    }
                 }
             </script>
         </div>
